@@ -1,0 +1,52 @@
+PATRONES ESTRUCTURALES
+
+DECORATOR:
+
+	- El patrón Decorator te permite estructurar tu lógica de negocio en capas, crear un decorador para cada capa y 
+	  componer objetos con varias combinaciones de esta lógica, durante el tiempo de ejecución. El código cliente puede 
+	  tratar a todos estos objetos de la misma forma, ya que todos siguen una interfaz común.
+	- Ejemplo: Una clase Reloj Basico, a la que se les añade mas funcionalidades con los decoradores reloj deportivo y reloj de lujo
+	
+ADAPTER:
+
+	- El patrón de diseño Adapter te sirve cuando tienes interfaces diferentes o incompatibles entre sí y necesitas que el 
+	  cliente pueda usar ambas del mismo modo.
+	- un Cliente necesita información de un servicio BankService que devuelve la información en la clase BankData.
+			Client: el cliente necesita información de una cuenta bancaria y la necesita en la clase User.
+			Client: el cliente llama al adapter para conseguir informacion del User
+			Adapter: el adapter llama al servicio para que devuelva información.
+			Adaptee: el servicio devuelve el BankUser, el Adaptee.
+			Adapter: el adapter convierte BankData en User y la devuelve al client.
+			Client: el cliente recibe la info en User. La clase que si entiende.
+
+FACADE:
+
+	- Simplifica la complejidad de un sistema mediante una interfaz mas sencilla. Mejora el acceso a nuestro sistema 
+	  logrando que otros sistemas o subsistemas usen un punto de acceso en común que reduce la complejidad, minimizando las 
+	  interacciones y dependencias.
+	- Un teléfono móvil que debemos encender y para ello es necesario ejecutar varias acciones (encender bateria, encender cpu, 
+	  encender servicios).
+
+PATRONES CREACIONALES
+
+SINGLETON:
+
+	- El objetivo es que una clase sólo tenga una instancia viva y garantizar que esto suceda.
+
+FACTORY:
+
+	- El patrón de diseño Factory es usado principalmente cuando tenemos una clase o interfaz con muchas subclases o implementaciones 
+	  y según algún input necesitamos devolver una de estas subclases concretas.
+	- Ejemplo: La clase Factura de la cual heredan dos clases que implementan el cálculo del IVA (uno IVA normal y otro reducido).
+	
+BUILDER:
+
+	- Propone crear un objeto completo a partir de otro más simple simplificando la creación del objeto y ayudándonos a obtener 
+	  un objeto consistente.
+	- Ejemplo: un usuario con muchos parametros tendria muchas conbinaciones a la hora de introducir datos
+
+PROTOTYPE:
+
+	- Tiene como objetivo clonarse a si mismo, heredando todos los metodos, propiedades y estados.
+	- Tenemos una fábrica de camisetas con estampados. Para crear nuevas camisetas, cogeremos una similar y modificaremos únicamente 
+	  el color, la talla y el estampado. 
